@@ -1,0 +1,12 @@
+<ul class="links-menu">
+    {% for category in categories %}
+        <li>
+            <a href="{% url 'index' %}"
+                class = "{% if request.resolver_match.url_name == index %}
+                    active
+                    {% endif %}">
+                {{ category.name }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
